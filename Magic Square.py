@@ -4,15 +4,13 @@
 # In[3]:
 import numpy as np
 import math
-c = 4510
-e = 9350
-h = 506
-rang = 10000
+c = 2
+e = 3
+h = 1
+rang = 10
 exit = 0
 blast = 0
-idifflast = 3017.77418
-idiff = 0
-ilast = 97955361
+
 
 def check(X):
     if((X - 1) / 3 == round((X - 1) / 3, 0)):
@@ -56,10 +54,6 @@ while exit == 0:
                         exit += 1
                     if q == 4 and blast != B:
                         blast = B
-                        idiff = math.sqrt(I-ilast)
-                        goal = idiff - idifflast
-                        idifflast = idiff
-                        ilast = I
                         print('\n', q + 3, ':')
                         print(math.sqrt(A), '   ',
                               '(', B, ')', '   ',
@@ -69,7 +63,7 @@ while exit == 0:
                               math.sqrt(F))
                         print(math.sqrt(G), '   ',
                               math.sqrt(H), '   ',
-                              '(', I, ')','  ',goal,'\n')
+                              '(', I, ')','  ','\n')
                     if q >= 5:
                         print('\n,\n,\n,\n,\n', q + 3, ":")
                         print(A, math.sqrt(A), B,
